@@ -4,5 +4,6 @@
   "src/components/ui/button.tsx": "src/组件/界面/按钮.tsx",
   "src/components/ui/input.tsx": "src/组件/界面/输入框.tsx",
   "src/components/ui/label.tsx": "src/组件/界面/标签.tsx",
-  "src/lib/utils.ts": "src/工具/工具.ts"
+  "src/lib/utils.ts": "src/工具/工具.ts",
+  "README.md": "项目入口.md"
 }
