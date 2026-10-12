@@ -1,5 +1,5 @@
 {
-  "README.md": "项目入口.md",
+  "README.md": "README.md",
   "src/app/globals.css": "src/app/全局样式.css",
   "src/components/ui/button.tsx": "src/组件/界面/按钮.tsx",
   "src/components/ui/input.tsx": "src/组件/界面/输入框.tsx",
