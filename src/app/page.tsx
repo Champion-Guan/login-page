@@ -4,9 +4,9 @@ import type { ChangeEvent, FormEvent } from "react";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { CheckCircle2, Eye, EyeOff, LogOut, Moon, Sparkles, Sun } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "@/组件/界面/按钮";
+import { Input } from "@/组件/界面/输入框";
+import { Label } from "@/组件/界面/标签";
 
 type Point = {
   x: number;
