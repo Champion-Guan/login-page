@@ -1,6 +1,7 @@
 {
   "name": "login-page",
   "version": "0.1.0",
+  "description": "基于 Next.js 的中文动态登录页",
   "private": true,
   "scripts": {
     "dev": "next dev",
