@@ -109,26 +109,3 @@ src/工具/工具.ts               通用工具函数
 npm run lint
 npm run build
 ```
-
-## 中文化范围与英文文件名保留原因
-
-项目中的界面文案、错误提示、可读说明、源码目录、组件文件名和样式文件名均已使用中文。以下文件仍保留英文或字母数字名称，这是运行环境的识别约定，不能只改文件名而不破坏项目：
-
-| 文件 | 不能直接改名的原因 |
-| --- | --- |
-| `.gitignore` | Git 只会自动读取根目录的这个固定文件名；改名后忽略规则不会生效，依赖目录和构建产物可能被误提交。 |
-| `package.json` | npm、Next.js 和部署平台通过这个固定文件名读取项目脚本、依赖和项目信息；改名后无法正常安装或构建。 |
-| `package-lock.json` | npm 用它锁定依赖版本和完整性校验；改名后 `npm install` 不会自动读取锁定结果。 |
-| `tsconfig.json` | TypeScript 默认只自动发现这个配置文件；改名后类型检查、路径别名和 JSX 编译配置不会生效。 |
-| `next.config.ts` | Next.js 只会自动加载约定的配置文件名；改名后框架无法读取配置。 |
-| `postcss.config.mjs` | PostCSS 和 Tailwind CSS 通过这个约定名称加载处理配置；改名后样式构建会失败。 |
-| `eslint.config.mjs` | ESLint 9 默认查找这个配置文件；改名后代码检查无法加载项目规则。 |
-| `components.json` | shadcn/ui 等组件工具通过这个文件定位样式、别名和组件目录；改名后组件生成和配置读取会失效。 |
-| `src/app/page.tsx` | Next.js App Router 把 `page.tsx` 识别为页面入口；改名后首页路由不再生成。 |
-| `src/app/layout.tsx` | Next.js 把 `layout.tsx` 识别为根布局；改名后全局布局和元信息不再加载。 |
-| `src/app/api/login/route.ts` | Next.js 把 `route.ts` 识别为接口处理器；改名后 `/api/login` 接口不存在。 |
-| `src/app/favicon.ico` | 浏览器和 Next.js 会自动寻找这个固定资源名；改名只会让默认网站图标失效。 |
-
-`src/app` 和 `src/app/api/login` 也是 Next.js 的路由目录约定。它们如果改成中文目录，必须额外改造框架配置，且会改变或破坏路由识别，因此保留原目录名。代码中的 `React`、`Next.js`、`TypeScript`、`Tailwind CSS`、包名、HTTP 方法、JSON 字段和环境变量 `Pwd` 同样属于程序接口标识，翻译后会造成构建或调用失败。
-
-这些保留项之外，仓库中的自然语言内容和可自由命名的文件、目录已经完成中文化。
